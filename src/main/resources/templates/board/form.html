@@ -24,14 +24,14 @@
                 <input type="hidden" th:field="*{ID}">
                 <div class="mb-3">
                     <label for="Title">제목</label>
-                    <input type="text" class="form-control" id="Title" th:field="*{Title}" th:classappend="${#fields.hasErrors('Title')} ? ' is-inavlid'">
+                    <input type="text" class="form-control" id="Title" th:field="*{Title}" th:classappend="${#fields.hasErrors('Title')} ? ' is-invalid'">
                     <div class="invalid-feedback" th:if="${#fields.hasErrors('Title')}" th:errors="*{Title}">
                           제목을 입력해주세요.
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="Content">내용</label>
-                    <textarea class="form-control" id="Content" rows="3" th:field="*{Content}" th:classappend="${#fields.hasErrors('Content')} ? ' is-inavlid'"></textarea>
+                    <textarea class="form-control" id="Content" rows="3" th:field="*{Content}" th:classappend="${#fields.hasErrors('Content')} ? ' is-invalid'"></textarea>
                     <div class="invalid-feedback" th:if="${#fields.hasErrors('Content')}" th:errors="*{Content}">
                         내용을 입력해주세요.
                     </div>
