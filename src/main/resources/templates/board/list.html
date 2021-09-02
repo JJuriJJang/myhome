@@ -49,13 +49,13 @@
                   <tbody>
                     <tr th:each="board : ${boards}">
                       <td th:text="${board.ID}">Mark</td>
-                      <td th:text="${board.Title}">Otto</td>
+                      <td><a th:text="${board.Title}" th:href="@{/board/form(Id=${board.ID})}">Otto</a></td> <!--@{/board/form(Id=${board.id} 이 부분에서 소괄호 안 문법에 유의. Id임..-->
                       <td>홍길동</td>
                     </tr>
                   </tbody>
               </table>
               <div class="text-end">
-              <button type="button" class="btn btn-primary">쓰기</button>
+              <a type="button" class="btn btn-primary" th:href="@{/board/form}">쓰기</a>
               </div>
         </div>
 
